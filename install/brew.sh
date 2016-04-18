@@ -15,8 +15,14 @@ apps=(
   coreutils
   dockutil
   git
+  leiningen
+  maven
+  mongodb
+  mysql
   peco
+  postgres
   python
+  rabbitmq
   shellcheck
   tree
   vim
