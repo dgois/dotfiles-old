@@ -320,7 +320,7 @@ killall mds
 sudo mdutil -i on /
 
 # Rebuild the index from scratch
-sudo mdutil -E /
+#sudo mdutil -E /
 
 ###############################################################################
 # Terminal                                                                    #
@@ -332,6 +332,13 @@ defaults write com.apple.terminal StringEncodings -array 4
 # Use "Pro" theme (black background color)
 defaults write com.apple.terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
+
+# Update font
+defaults write com.apple.Terminal UseBrightBold -bool true
+defaults write com.apple.Terminal FontAntialias -bool true
+defaults write com.apple.Terminal AppleFontSmoothing -int 10
+defaults write com.apple.Terminal FontAntialias 1 
+
 
 # Disable audible and visual bells
 defaults write com.apple.terminal "Bell" -bool false
