@@ -7,6 +7,8 @@ brew tap caskroom/versions
 # Install packages
 
 apps=(
+  dash
+  dockertoolbox
   eclipse-ide
   evernote
   firefox
@@ -23,7 +25,6 @@ apps=(
   vlc
 
 #  alfred
-#  dash
 #  dropbox
 #  firefox-nightly
 #  glimmerblocker
@@ -36,6 +37,7 @@ apps=(
 #  opera
 #  screenflow
 #  sourcetree
+#  spectacle
 #  transmit
 #  webstorm
 )
