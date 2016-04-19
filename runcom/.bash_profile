@@ -40,7 +40,7 @@ fi
 # Set LSCOLORS
 
 #eval "$(dircolors "$DOTFILES_DIR"/system/.dir_colors)"
-export LSCOLORS=exfxcxdxbxegedabagacad
+export LSCOLORS=cxfxcxdxbxegedabagacad
 
 # Hook for extra/custom stuff
 
