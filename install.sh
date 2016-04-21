@@ -25,6 +25,10 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 . "$DOTFILES_DIR/install/npm.sh"
 #. "$DOTFILES_DIR/install/pip.sh"
 
+# Config some applications
+
+. "$DOTFILES_DIR/config/sublime.sh"
+
 if [ "$(uname)" == "Darwin" ]; then
   . "$DOTFILES_DIR/install/brew-cask.sh"
 #  . "$DOTFILES_DIR/install/gem.sh"
