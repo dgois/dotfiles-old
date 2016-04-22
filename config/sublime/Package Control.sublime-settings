@@ -8,6 +8,7 @@
 	[
 		"BracketHighlighter",
 		"lispindent",
+		"Markdown Preview",
 		"Package Control",
 		"paredit",
 		"Pretty JSON",
