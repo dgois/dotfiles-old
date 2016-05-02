@@ -9,6 +9,7 @@ brew tap caskroom/versions
 apps=(
   dash
   dockertoolbox
+  dropbox
   eclipse-ide
   evernote
   firefox
