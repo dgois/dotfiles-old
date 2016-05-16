@@ -52,3 +52,52 @@ meteo() {
   local CITY=${1:-"Salto, Brazil"}
   curl -4 "wttr.in/$CITY"
 }
+
+remove_old_cask_versions() {
+  #Variables
+  cask_directory='/opt/homebrew-cask/Caskroom'
+  outdated_versions=()
+
+  #Iterate to show all app versions
+  for app in $(ls $cask_directory); do
+    versions_amount="$(ls $cask_directory/$app | wc -l | xargs)"
+
+    if [[ $versions_amount > 1 ]]
+    then
+      echo "app: $app"
+      for version in $(ls -rt $cask_directory/$app | head -$(($versions_amount - 1))); do
+        echo " OLD: $version"
+        outdated_versions=("${outdated_versions[@]}" "$cask_directory/$app/$version")
+      done
+
+      echo " LAST: $(ls -t $cask_directory/$app | head -1)"
+    fi
+  done
+
+  if [[ $versions_amount > 1 ]];
+  then
+    #Label
+    echo
+    echo " OLD : Old versions"
+    echo " LAST : Last version"
+    echo
+
+    #Confirm if the user want to delete old versions
+    echo -n "Are you sure of delete the outdated versions marked with X? [Yy | nN] "
+    read -N 1 reply
+    echo
+
+    #Delete old version if Y|y
+    if test "$reply" = "y" -o "$reply" = "Y"; 
+    then
+      for old_versions in ${outdated_versions[@]}; do
+        echo "Delete app: $old_versions"
+        rm -r $old_versions
+      done
+    else
+      echo "Operation cancelled!"
+    fi
+  else
+    echo "There are no old versions to delete!"
+  fi
+}
