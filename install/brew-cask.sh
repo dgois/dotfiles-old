@@ -50,3 +50,8 @@ brew cask install "${apps[@]}"
 
 # Link Hammerspoon config
 #[ -d ~/.hammerspoon ] || ln -sfv "$DOTFILES_DIR/etc/hammerspoon/" ~/.hammerspoon
+
+# Remove outdated cask apps versions
+echo
+remove_outdated_cask_versions
+echo
