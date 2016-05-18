@@ -53,7 +53,7 @@ meteo() {
   curl -4 "wttr.in/$CITY"
 }
 
-remove_old_cask_versions() {
+remove_outdated_cask_versions() {
   #Variables
   cask_directory='/opt/homebrew-cask/Caskroom'
   outdated_versions=()
