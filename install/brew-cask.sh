@@ -16,7 +16,7 @@ apps=(
   flux
   java
   jd-gui
-  intellij-idea
+  intellij-idea-ce
   iterm2-beta
   slack
   skype
