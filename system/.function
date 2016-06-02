@@ -58,7 +58,7 @@ remove_outdated_cask_versions() {
   cask_directory='/opt/homebrew-cask/Caskroom'
   outdated_versions=()
 
-  #Iterate to show all app versions
+  #Iterate to show all app versions and get the old ones
   for app in $(ls $cask_directory); do
     versions_amount="$(ls $cask_directory/$app | wc -l | xargs)"
 
@@ -74,7 +74,8 @@ remove_outdated_cask_versions() {
     fi
   done
 
-  if [[ $versions_amount > 1 ]];
+  #Verify if there is more than one version per application
+  if [[ ${#outdated_versions[@]} > 1 ]];
   then
     #Label
     echo
@@ -83,7 +84,7 @@ remove_outdated_cask_versions() {
     echo
 
     #Confirm if the user want to delete old versions
-    echo -n "Are you sure of delete the outdated versions marked with X? [Yy | nN] "
+    echo -n "Are you sure of delete the outdated versions marked with OLD? [Yy | nN] "
     read -N 1 reply
     echo
 
@@ -98,6 +99,8 @@ remove_outdated_cask_versions() {
       echo "Operation cancelled!"
     fi
   else
-    echo "There are no old versions to delete!"
+    echo
+    echo "There are no old Cask versions to delete!"
+    echo
   fi
 }
