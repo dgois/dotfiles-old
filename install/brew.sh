@@ -10,6 +10,7 @@ brew upgrade
 # Install packages
 
 apps=(
+  apache-activemq
   bash-completion2
   bats
   coreutils
@@ -23,6 +24,7 @@ apps=(
   postgres
   python
   rabbitmq
+  redis
   shellcheck
   tree
   vim
