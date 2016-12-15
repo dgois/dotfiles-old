@@ -21,7 +21,7 @@ apps=(
   slack
   skype
   spotify
-  sublime-text3
+  sublime-text
   virtualbox
   vlc
 
