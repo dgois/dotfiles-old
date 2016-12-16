@@ -19,7 +19,7 @@ echo "################# Bunch of symlinks ###############################"
 
 ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/runcom/.inputrc" ~
-#ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
+ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 
@@ -34,7 +34,7 @@ echo "################# Package managers & packages #####################"
 
 if [ "$(uname)" == "Darwin" ]; then
   . "$DOTFILES_DIR/install/brew-cask.sh"
-#  . "$DOTFILES_DIR/install/gem.sh"
+  . "$DOTFILES_DIR/install/gem.sh"
 #  ln -sfv "$DOTFILES_DIR/etc/mackup/.mackup.cfg" ~
 fi
 
