@@ -13,6 +13,8 @@
 		"Package Control",
 		"paredit",
 		"Pretty JSON",
-		"SublimeREPL"
+		"SideBarEnhancements",
+		"SublimeREPL",
+		"SyncedSideBar"
 	]
 }
