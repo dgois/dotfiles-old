@@ -18,8 +18,10 @@ apps=(
   jd-gui
   intellij-idea-ce
   iterm2-beta
+  postman
   slack
   skype
+  spectacle
   spotify
   sublime-text
   virtualbox
@@ -38,7 +40,7 @@ apps=(
 #  opera
 #  screenflow
 #  sourcetree
-#  spectacle
+
 #  transmit
 #  webstorm
 )
