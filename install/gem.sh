@@ -9,3 +9,4 @@ rvm use 2.3.3 --default
 #gem install lunchy
 #gem install pygmentize
 gem install i2cssh
+gem install rotp
