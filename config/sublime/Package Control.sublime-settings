@@ -8,6 +8,12 @@
 	[
 		"All Autocomplete",
 		"BracketHighlighter",
+		"Color Highlighter",
+		"CSS Completions",
+		"CSS Extended Completions",
+		"Gherkin (Cucumber) Formatter",
+		"HTML-CSS-JS Prettify",
+		"JavaScript Completions",
 		"lispindent",
 		"Markdown Preview",
 		"Package Control",
