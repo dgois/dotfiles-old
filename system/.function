@@ -119,7 +119,7 @@ vpn() {
         local suffix=`ruby -e "require 'rotp'; puts ROTP::TOTP.new('$token').now"`;
         local vpn_pass="$pass$suffix";
         scutil --nc start "$VPNName";
-        sleep 1.5;
+        sleep 2;
         osascript -e "tell application \"System Events\" to keystroke \"$vpn_pass\"";
         osascript -e "tell application \"System Events\" to keystroke return";
         sleep 2;
@@ -127,4 +127,16 @@ vpn() {
     else
         echo "Already Connected to VPN...";
     fi
+}
+
+_i2cssh_options() {
+  local word=${COMP_WORDS[COMP_CWORD]}
+
+  local completions=$(grep '^\  prod\|^\  stg\|^\  qa' ~/.i2csshrc | sed 's/.\{1\}$//')
+
+  COMPREPLY=( $(compgen -W "$completions" -- "$word") )
+  
+  #References: 
+  #https://spin.atomicobject.com/2016/02/14/bash-programmable-completion/
+  #http://www.linuxjournal.com/content/more-using-bash-complete-command
 }
