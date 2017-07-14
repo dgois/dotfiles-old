@@ -8,6 +8,11 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>Coprocess MRU</key>
+	<array>
+		<string>security -q find-generic-password -gl pass 2&gt;&amp;1  | egrep '^password' | awk -F\" '{print $2}'</string>
+		<string>security -q find-generic-password -gl pass 2&gt;&amp;1  | egrep '^password' | awk -F\" '{print $2}' \n</string>
+	</array>
 	<key>Default Bookmark Guid</key>
 	<string>A1B6B1E9-1443-43C5-BBCD-B247B6E360E4</string>
 	<key>GlobalKeyMap</key>
@@ -18,6 +23,13 @@
 			<integer>39</integer>
 			<key>Text</key>
 			<string></string>
+		</dict>
+		<key>0x70-0x180000</key>
+		<dict>
+			<key>Action</key>
+			<integer>12</integer>
+			<key>Text</key>
+			<string>G1sl41n3%\n</string>
 		</dict>
 		<key>0x9-0x40000</key>
 		<dict>
@@ -156,24 +168,29 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 289 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>50 998 606 456 -306 800 1920 1057 </string>
+	<string>183 106 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>197 206 1016 502 0 0 1280 777 </string>
+	<string>197 223 937 465 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 4 1277 773 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1 17 1277 752 0 0 1280 777 </string>
+	<string>0 4 1277 773 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 310 570 452 0 0 1280 777 </string>
+	<string>0 4 1276 773 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>1568 319 1919 1053 1568 315 1920 1057 </string>
+	<string>0 4 1277 773 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>1568 914 570 452 1568 315 1920 1057 </string>
+	<string>0 4 1277 773 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>1 11 1277 758 0 0 1280 777 </string>
+	<string>0 19 1263 758 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
 	<string>1 11 1277 758 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
@@ -738,6 +755,8 @@
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Triggers</key>
+			<array/>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -763,7 +782,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>4479D2D4-67B8-456D-A89A-6735AE9FC5A1</string>
 	<key>NoSyncLastTipTime</key>
-	<real>512491042.801723</real>
+	<real>513517538.52986902</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -834,6 +853,13 @@
 		<string>0056</string>
 		<string>0057</string>
 		<string>0058</string>
+		<string>0059</string>
+		<string>0060</string>
+		<string>0061</string>
+		<string>0062</string>
+		<string>0063</string>
+		<string>0064</string>
+		<string>0065</string>
 	</array>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
@@ -883,13 +909,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-28T10:39:12Z</date>
+	<date>2017-06-06T16:40:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
@@ -897,6 +923,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.14</string>
+	<string>3.0.15</string>
 </dict>
 </plist>
